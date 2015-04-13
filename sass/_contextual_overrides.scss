@@ -1,0 +1,138 @@
+$h-admin_menu: 30px;
+
+body,
+#overlay-content {
+    background: $white;
+    color: scale-lightness( black, 10% );
+    font-size: 16px;
+    line-height: 1.5em;
+    font-family: $font-source_sans;
+}
+
+html.js body {
+	padding-top: 0;
+	margin-top: $h-admin_menu; // makes space for admin menu
+}
+
+#page {
+	color: inherit;
+}
+
+.admin-list {
+	li a {
+		font-weight: 600;
+	}
+}
+
+
+#admin-menu li > a {
+	padding: 6px 8px
+}
+
+
+#overlay {
+    background: none repeat scroll 0% 0% rgba(80, 80, 80, 0.8);
+    border-top: 1px solid #626262;
+	@include border-radius( 8px );
+	margin-top: 3em;
+	padding: 0.3em 0 0 0;
+	min-width: 0;
+
+	#overlay-titlebar {
+	}
+	.breadcrumb,
+	#overlay-title-wrapper {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#overlay-title {
+		font-weight: 600;
+		font-size: 1.7em;
+		margin-bottom: 0.2em;
+	}
+	.breadcrumb {
+		a {
+			color: scale-lightness( $D-blue, 30% );
+
+			&:hover,
+			&:focus {
+				color: shade( scale-lightness( $D-blue, 30% ), 30% );
+			}
+		}
+		a:last-child {
+			color: scale-lightness( white, -20% );
+
+			&:hover,
+			&:focus {
+				color: shade( scale-lightness( white, -20% ), 30% );
+			}
+		}
+	}
+	#overlay-close-wrapper {
+		right: 3px;
+		top: 0px;
+		padding-right: 26px;
+
+		#overlay-close {
+			border-radius: 10%;
+			background-image: url('../images/ex.svg');
+			background-color: inherit;
+		}
+	}
+	#overlay-content {
+		@include border-radius( 8px );
+		padding: 1.8em;
+	}
+	#overlay-tabs {
+		font-size: inherit;
+		line-height: inherit;
+
+		li {
+			margin-bottom: -1px;
+		}
+	}
+
+	#page {
+		& > ul.secondary {
+			float: none;
+			width: 100%;
+			border-bottom: 1px solid #C8C8C8;
+			margin-top: 0;
+
+			li {
+				padding-right: 0;
+				margin: 0 0 -1px 0;
+
+				a {
+					@include border-radius( 5px 5px 0 0 );
+					background: none;
+					font-weight: 600;
+
+					&.active {
+						border-bottom: 1px solid #000;
+						color: inherit;
+					}
+					&:hover,
+					&:focus {
+						color: scale-lightness( $D-blue, -15% );
+					}
+				}
+			}
+		}
+		#content > .action-links {
+			margin-top: 0;
+		}
+	}
+}
+
+
+.views-exposed-form {
+	.views-exposed-widget {
+		label {
+			margin-bottom: 0.3em;
+		}
+		.form-submit {
+		    margin-top: 1.8em; // equal to 1 line of text (at 1.5em line-height) + label's bottom margin
+		}
+	}
+}

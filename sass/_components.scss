@@ -1,0 +1,34 @@
+div.messages {
+    // background-position: 8px 8px;
+    // background-repeat: no-repeat;
+    // border: 1px solid;
+	@include border-radius( $corner_radius-large );
+    // margin: 6px 0px;
+    // padding: 10px 10px 10px 50px;
+}
+
+div.status,
+div.warning,
+div.error {
+	font-weight: 600;
+	border-left-width: 5px;
+	@include border-radius( 2px );
+}
+div.status {
+    color: scale-lightness( $success, -30% ) !important;
+	background-color: scale-lightness( $success, 92% ) !important;
+	border-color: scale-lightness( $success, 0% );
+	background-image: url('../images/check.svg');
+}
+div.warning {
+    color: scale-lightness( $warning, -30% );
+	background-image: url('../images/warning.svg');
+	background-color: scale-lightness( $warning, 92% );
+	border-color: scale-lightness( $warning, 0% );
+}
+div.error {
+    color: scale-lightness( $error, -30% );
+	background-image: url('../images/error.svg');
+	background-color: scale-lightness( $error, 92% );
+	border-color: scale-lightness( $error, 0% );
+}

@@ -1,0 +1,36 @@
+#navbar-administration {
+	a {
+		cursor: pointer !important;
+		text-align: left;}
+	button {
+		border-radius: 0 !important;}
+	.navbar-icon {
+	    padding-left: 3.5em;}
+	.menu .menu {
+		background: rgba(0, 0, 0, 0.08);}
+	.navbar-tab > .navbar-active {
+		background: #006DC2 !important;}
+	.navbar-tray .active {
+		font-weight: bold !important;}
+	.navbar-icon.navbar-handle {
+		border-left: 1px solid #CCC !important;}
+	.menu .menu .navbar-icon.navbar-handle {
+		/*border-top: 1px solid #CCC !important;*/}
+	.navbar-icon.navbar-handle:before {
+		left: 9px !important;}
+
+	.navbar-tray-vertical {
+		.menu ul ul {
+		    border-bottom: none;
+		    border-top: none;}
+		.menu ul {
+		    overflow: hidden;
+		    transition: all 0.5s ease 0s;
+		    display: block !important;}
+		.navbar-twisty > .menu {
+		    max-height: 0;}
+		.navbar-twisty.open > .menu {
+		    max-height: 900px;
+		}
+	}
+}
