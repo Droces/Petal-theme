@@ -19,13 +19,17 @@
  * @see template_process()
  *
  * @ingroup themeable
+ * 
+ * Taken from Overlay core module on 18/07/2015.
+ * Removed all 'clearfix' classes
+ * 
  */
 ?>
 
 <?php print render($disable_overlay); ?>
 <div id="overlay" <?php print $attributes; ?>>
-  <div id="overlay-titlebar" class="clearfix">
-    <div id="overlay-title-wrapper" class="clearfix">
+  <div id="overlay-titlebar">
+    <div id="overlay-title-wrapper">
       <h1 id="overlay-title"<?php print $title_attributes; ?>><?php print $title; ?></h1>
     </div>
     <div id="overlay-close-wrapper">

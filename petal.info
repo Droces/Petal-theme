@@ -16,14 +16,14 @@
 
 screenshot  = screenshot.png
 name        = Petal
-description = A beautiful admin theme based on Seven. Petal is a child theme of Blossom, which is a child theme of Seven.
+description = A beautiful admin theme. Petal is a sub-theme of Seven.
 
 
 
 ; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
 
 core        = 7.x
-base theme  = blossom
+base theme  = seven
 
 
 
@@ -39,9 +39,13 @@ base theme  = blossom
 ; - Remove a module's stylesheet. If you specify the name of a Drupal core or
 ;   contrib module's stylesheets, Drupal will remove that stylesheet if you do
 ;   NOT include a file with that name with your theme.
-;
-; stylesheets[MEDIA][] = FILE
-;
+
+;stylesheets[all][] = overlay-parent.css
+;stylesheets[all][] = overlay-child.css
+
+stylesheets[screen][] = reset.css
+stylesheets[screen][] = style.css
+
 ; The "FILE" is the name of the stylesheet to add/override/remove.
 ; The "MEDIA" in the first set of brackets is a media type or a media query.
 ; Typical CSS media types include "all", "screen", "print", and "handheld". A
@@ -51,7 +55,7 @@ base theme  = blossom
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
 ; Then we add our own stylesheet.
-stylesheets[all][] = css/petal.css
+stylesheets[all][] = stylesheets/petal.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html

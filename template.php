@@ -130,3 +130,57 @@ function petal_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+ * Implements hook_form_alter().
+ */
+function petal_form_alter (&$form, &$form_state, $form_id) {
+  // dpm($form, 'form');
+  // dpm($form_id, 'form_id');
+
+  // Make VBO 'Operations' fieldset collapsible and collapsed initially
+  if (substr($form_id, 0, 35) == 'views_form_admin_views_node_system_') {
+    if (isset($form['select'])) {
+      $form['select']['#attributes']['class'][] = 'collapsed';
+      $form['select']['#collapsible'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function petal_form_views_exposed_form_alter (&$form, &$form_state, $form_id) {
+  // dpm($form, 'form');
+  // dpm($form_id, 'form_id');
+
+  // Does not work; Rearranging this form's elements requires equivalent changes to the validation handler
+  // Make VBO 'Operations' fieldset collapsible and collapsed initially
+  // if (substr($form['#id'], 0, 43) == 'views-exposed-form-admin-views-node-system-') {
+  //   $form['fields-grouped'] = array(
+  //     '#type' => 'fieldset',
+  //     '#title' => t('Filter'),
+  //     '#collapsible' => TRUE,
+  //     '#collapsed' => TRUE,
+  //     '#tree' => TRUE,
+  //   );
+
+  //   $form['fields-grouped']['title'] = $form['title'];
+  //   $form['fields-grouped']['type'] = $form['type'];
+  //   $form['fields-grouped']['author'] = $form['author'];
+  //   $form['fields-grouped']['status'] = $form['status'];
+  //   $form['fields-grouped']['vid'] = $form['vid'];
+  //   $form['fields-grouped']['submit'] = $form['submit'];
+  //   $form['fields-grouped']['reset'] = $form['reset'];
+
+  //   unset($form['title']);
+  //   unset($form['type']);
+  //   unset($form['author']);
+  //   unset($form['status']);
+  //   unset($form['vid']);
+  //   unset($form['submit']);
+  //   unset($form['reset']);
+
+  //   dpm($form, 'form');
+  // }
+}

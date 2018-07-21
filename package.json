@@ -1,0 +1,21 @@
+{
+  "name": "petal_admin_theme",
+  "version": "1.0.0",
+  "description": "An improved administrative theme for Drupal 7, based on Seven",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-sass": "~2.3.2",
+    "gulp-sourcemaps": "~1.6.0",
+    "gulp-compass": "~2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Touchdreams <touchdreams.co.za>",
+  "license": ""
+}

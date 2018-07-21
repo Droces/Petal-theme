@@ -14,7 +14,7 @@
 
 // =================================================================
 // 											Variables
-// 
+//
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
@@ -30,6 +30,7 @@ $nav-height: 3em;
 $pointer_target-size: 2.5rem; /* height or width */
 
 $pointer_target-padding: 0.3em 1em; /* used by buttons */
+$pointer_target-flat-padding: 0.3em; /* used by flat buttons */
 $pointer_target-line-height: 1.3em; /* Assuming font-size: 1rem; */
 
 $data-field-padding: 0.3em 0.5em; /* used by table cells and text fields */
@@ -37,12 +38,14 @@ $data-field-padding: 0.3em 0.5em; /* used by table cells and text fields */
 $corner_radius-large:	0.5em;
 $corner_radius-pointer:	2px;
 
+$page-margins: 40px;
+
 
 // =================================================================
 // 											Fonts
 // Font faces, stacks and sizes.
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700);
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700);
 
 @font-face {
   font-family: 'Source Sans Pro';
@@ -84,42 +87,42 @@ $font-source_sans: 'Source Sans Pro', sans-serif;
 // =================================================================
 // 											Colors
 
-$tabs-container-bg: #fff;
-$tabs-border: #bbb;
+$tabs-container-bg:   #fff;
+$tabs-border:         #bbb;
 
 // Primary palette
-$white:			#ffffff;
-$text:			#1a1a1a;
-$burlap:		#ebeae4;
-$D-blue:		#0074bd;
+$white:	              #ffffff;
+$text:                #1a1a1a;
+$burlap:              #ebeae4;
+$D-blue:              #0074bd;
 
 // Secondary palette
-$eggshell:		#fcfcfa;
-$eggshell2:		#f5f5f2;
-$smoked-glass:	hsla( 0, 0%, 42%, 0.65 );
-$light-text:	#595959;
+$eggshell:            #fcfcfa;
+$eggshell2:           #f5f5f2;
+$smoked-glass:        hsla( 0, 0%, 42%, 0.65 );
+$light-text:          #595959;
+$color-input-focus:   rgba(#ace, 0.6);
 
-$selection:		#40b6ff;
-$danger:		#c72100;
-$error:			#e62600;
-$warning:		#e09600;
-$success:		#77b259;
+$selection:	          #40b6ff;
+$danger:		          #c72100;
+$error:			          #e62600;
+$warning:	            #e09600;
+$success:	            #77b259;
+
+$overlay-bg:          #E0E0D8;
+
+$overlay-tabs-bg:           #EDEDE9;
+$overlay-tabs-bg-hover:     #F5F5F5;
+$overlay-tabs-bg-active:    white;
+$overlay-tabs-color:        #444440;
+$overlay-tabs-border-color: #A6A6A6;
 
 
 
 // =================================================================
 // 											Partials
 // to be shared with all .scss files.
-// 
-
-// Add Compass' IE and vendor prefix support variables.
-@import "compass/support";
-// Better than Drupal's clearfix.
-@import "compass/utilities/general/clearfix";
-// See http://compass-style.org/help/tutorials/spriting/
-@import "compass/utilities/sprites";
-// Use one CSS3 mixin instead of multiple vendor prefixes.
-@import "compass/css3";
+//
 
 // Now we add our custom helper mixins.
 @import "mixins";

@@ -1,0 +1,173 @@
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+
+
+// =================================================================
+// 											Seven's generic HTML elements
+body {
+  color: #000;
+  background: #fff;
+  // font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+a {
+  color: #0074BD;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+hr {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 1px;
+  background: #cccccc;
+}
+legend {
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+h1 {
+  font-size: 1.538em;
+}
+h2 {
+  font-size: 1.385em;
+}
+h3 {
+  font-size: 1.231em;
+}
+h4 {
+  font-size: 1.154em;
+}
+h5,
+h6 {
+  font-size: 1.077em;
+}
+p {
+  margin: 1em 0;
+}
+dl {
+  margin: 0 0 20px;
+}
+dl dd,
+dl dl {
+  margin-left: 20px; /* LTR */
+  margin-bottom: 10px;
+}
+blockquote {
+  margin: 1em 40px;
+}
+address {
+  font-style: italic;
+}
+u,
+ins {
+  text-decoration: underline;
+}
+s,
+strike,
+del {
+  text-decoration: line-through;
+}
+big {
+  font-size: larger;
+}
+small {
+  font-size: smaller;
+}
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+  line-height: normal;
+}
+sup {
+  vertical-align: super;
+  font-size: smaller;
+  line-height: normal;
+}
+nobr {
+  white-space: nowrap;
+}
+abbr,
+acronym {
+  border-bottom: dotted 1px;
+}
+quote,
+code {
+  margin: .5em 0;
+}
+code,
+pre,
+kbd {
+  font-size: 1.231em;
+}
+pre {
+  margin: 0.5em 0;
+  white-space: pre-wrap;
+}
+
+
+
+// =================================================================
+// 											Custom HTML elements
+html {
+	line-height: 1.4;
+}
+
+
+
+// =================================================================
+// 											Headings
+h1, h2, h3, h4 {
+	font-weight: 600;
+}
+h1 {
+	font-size: 1.625em;
+	line-height: 1.1;
+}
+h2 {
+	font-size: 1.3125em;
+	line-height: 1.15;
+}
+h3 {}
+h4 {}
+
+
+
+// =================================================================
+// 											links
+$colour-links: $D-blue;
+a {
+    color: $colour-links;
+}
+a:link {}
+a:visited {
+    color: $colour-links;}
+a:hover,
+a:focus {
+    color: shade( $colour-links, 50% );
+	text-decoration: underline;
+}
+a:active { /* a link when it is 'clicked' on */
+    color: shade( $colour-links, 30% );
+}
+a.active,
+a[aria-selected="true"] { /* in Drupal, this is a link that points to the current (active) page */
+    color: inherit;}
+input,
+td, th,
+.vertical-tabs {
+	a {
+		text-decoration: none;
+	}
+}
