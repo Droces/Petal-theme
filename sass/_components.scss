@@ -37,8 +37,55 @@
     border-right: solid 1px grey;
   }
 }
+@mixin page-max-width {
+ max-width: 1400px;
+ margin-right: $page-margins; /* LTR */
+ margin-left: $page-margins; /* LTR */
+
+ @media all and (min-width: 800px) {
+   margin-left: auto;
+   margin-right: auto;
+ }
+}
+
+
+
+
+/**
+ *                                        Layout
+ */
+body.page-admin-reports-status #block-system-main > .content,
 .table-container {
   @include responsive-table-container;
+}
+#branding > [role="presentation"],
+#page {
+ @include page-max-width;
+}
+@media all and (max-width: 600px) {
+  div.vertical-tabs {
+    background: #f2f2f2; // very pale grey
+
+    .vertical-tabs-list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      float: none;
+    }
+    ul li.vertical-tab-button {
+      a {
+        border-left: 1px solid #ccc;
+      }
+      .summary {
+        display: none;
+      }
+    }
+    .vertical-tabs-panes {
+      margin-left: 0;
+      background: white;
+      border-top: 1px solid #ccc;
+    }
+  }
 }
 
 
@@ -61,10 +108,6 @@ html.js body {
 
   padding: 0/* 1.5em 1em */;
   margin-top: $h-admin_menu; // makes space for admin menu
-}
-
-#page {
-  color: inherit;
 }
 
 .admin-list {
@@ -612,9 +655,8 @@ ul.secondary {
  *                                        Page layout.
  */
 #page {
+  color: inherit;
   padding: 0/* 20px 0 40px 0 */; /* LTR */
-  margin-right: $page-margins; /* LTR */
-  margin-left: $page-margins; /* LTR */
   // background: #fff;
   position: relative;
   color: #333;
@@ -888,8 +930,16 @@ input[type="week"] {
 
 
 /**
- *                                        Views exposed form.
+ *                                        Views
  */
+.views-display-columns > * {
+  @media all and (max-width: 600px) {
+    float: none;
+    margin-left: 0;
+    padding-left: 0;
+    width: auto;
+  }
+}
 .views-exposed-form {
   .views-exposed-widget {
     label {
@@ -902,12 +952,6 @@ input[type="week"] {
 }
 .views-table {
   @include responsive-table-container;
-}
-.form-type-select {
-  max-width: 100%;
-  select {
-    width: 100%;
-  }
 }
 
 
@@ -966,7 +1010,7 @@ div.messages {
 div.status,
 div.warning,
 div.error {
-  font-weight: 600;
+  font-weight: inherit;
   border-left-width: 5px;
   border-radius: ( 2px );
 }

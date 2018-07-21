@@ -138,8 +138,9 @@ h4 {}
 
 
 
-// =================================================================
-// 											links
+/* =============================================================================
+ *                                                  Links
+ */
 $colour-links: $D-blue;
 a {
     color: $colour-links;
@@ -164,4 +165,39 @@ td, th,
 	a {
 		text-decoration: none;
 	}
+}
+
+
+
+/* =============================================================================
+ *                                                  Forms
+ */
+.form-type-select {
+  max-width: 100%;
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.form-type-textfield {
+  max-width: 100%;
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+// User create / edit form
+@media all and (max-width: 600px) {
+  .confirm-parent,
+  .password-parent {
+    width: auto;
+  }
+  .password-strength {
+    width: auto;
+    float: none;
+  }
+  input.password-confirm,
+  input.password-field {
+    width: auto;
+  }
 }

@@ -467,6 +467,9 @@ h2 {
   font-size: 1.3125em;
   line-height: 1.15; }
 
+/* =============================================================================
+ *                                                  Links
+ */
 a {
   color: #0074bd; }
 
@@ -491,6 +494,32 @@ input a,
 td a, th a,
 .vertical-tabs a {
   text-decoration: none; }
+
+/* =============================================================================
+ *                                                  Forms
+ */
+.form-type-select {
+  max-width: 100%; }
+  .form-type-select select {
+    width: 100%;
+    box-sizing: border-box; }
+
+.form-type-textfield {
+  max-width: 100%; }
+  .form-type-textfield input {
+    width: 100%;
+    box-sizing: border-box; }
+
+@media all and (max-width: 600px) {
+  .confirm-parent,
+  .password-parent {
+    width: auto; }
+  .password-strength {
+    width: auto;
+    float: none; }
+  input.password-confirm,
+  input.password-field {
+    width: auto; } }
 
 /* Component (SMACSS module) rules */
 /* CONTENTS
@@ -523,11 +552,45 @@ td a, th a,
     User login block
     Disable overlay message
  */
+/**
+ *                                        Layout
+ */
 @media all and (max-width: 900px) {
+  body.page-admin-reports-status #block-system-main > .content,
   .table-container {
     overflow-x: scroll;
     border-left: solid 1px grey;
     border-right: solid 1px grey; } }
+
+#branding > [role="presentation"],
+#page {
+  max-width: 1400px;
+  margin-right: 6%;
+  /* LTR */
+  margin-left: 6%;
+  /* LTR */ }
+  @media all and (min-width: 800px) {
+    #branding > [role="presentation"],
+    #page {
+      margin-left: auto;
+      margin-right: auto; } }
+
+@media all and (max-width: 600px) {
+  div.vertical-tabs {
+    background: #f2f2f2; }
+    div.vertical-tabs .vertical-tabs-list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      float: none; }
+    div.vertical-tabs ul li.vertical-tab-button a {
+      border-left: 1px solid #ccc; }
+    div.vertical-tabs ul li.vertical-tab-button .summary {
+      display: none; }
+    div.vertical-tabs .vertical-tabs-panes {
+      margin-left: 0;
+      background: white;
+      border-top: 1px solid #ccc; } }
 
 /**
  *                                        Small components
@@ -543,9 +606,6 @@ body,
 html.js body {
   padding: 0;
   margin-top: 30px; }
-
-#page {
-  color: inherit; }
 
 .admin-list li a {
   font-weight: 600; }
@@ -930,11 +990,8 @@ ul.secondary {
  *                                        Page layout.
  */
 #page {
+  color: inherit;
   padding: 0;
-  /* LTR */
-  margin-right: 6%;
-  /* LTR */
-  margin-left: 6%;
   /* LTR */
   position: relative;
   color: #333; }
@@ -1180,8 +1237,15 @@ input[type="week"] {
   border-top-color: #999; }
 
 /**
- *                                        Views exposed form.
+ *                                        Views
  */
+@media all and (max-width: 600px) {
+  .views-display-columns > * {
+    float: none;
+    margin-left: 0;
+    padding-left: 0;
+    width: auto; } }
+
 .views-exposed-form .views-exposed-widget label {
   margin-bottom: 0.3em; }
 
@@ -1193,11 +1257,6 @@ input[type="week"] {
     overflow-x: scroll;
     border-left: solid 1px grey;
     border-right: solid 1px grey; } }
-
-.form-type-select {
-  max-width: 100%; }
-  .form-type-select select {
-    width: 100%; }
 
 /**
  *                                        Database log table.
@@ -1228,7 +1287,7 @@ div.messages {
 div.status,
 div.warning,
 div.error {
-  font-weight: 600;
+  font-weight: inherit;
   border-left-width: 5px;
   border-radius: 2px; }
 
