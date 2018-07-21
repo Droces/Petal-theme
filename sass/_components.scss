@@ -42,7 +42,7 @@
  margin-right: $page-margins; /* LTR */
  margin-left: $page-margins; /* LTR */
 
- @media all and (min-width: 800px) {
+ @media all and (min-width: 1650px) {
    margin-left: auto;
    margin-right: auto;
  }
@@ -423,8 +423,6 @@ fieldset {
 
   // float: left;
   margin-bottom: 1em;
-  padding-left: $page-margins; /* LTR */
-  padding-right: $page-margins; /* LTR */
 
   body > & {
     background: $overlay-bg;

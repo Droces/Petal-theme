@@ -569,7 +569,7 @@ td a, th a,
   /* LTR */
   margin-left: 6%;
   /* LTR */ }
-  @media all and (min-width: 800px) {
+  @media all and (min-width: 1650px) {
     #branding > [role="presentation"],
     #page {
       margin-left: auto;
@@ -829,11 +829,7 @@ fieldset {
  */
 #branding {
   padding: 0;
-  margin-bottom: 1em;
-  padding-left: 6%;
-  /* LTR */
-  padding-right: 6%;
-  /* LTR */ }
+  margin-bottom: 1em; }
   body > #branding {
     background: #E0E0D8;
     border-bottom: solid 1px #A6A6A6; }
