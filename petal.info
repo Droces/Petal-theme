@@ -55,7 +55,7 @@ stylesheets[screen][] = style.css
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
 ; Then we add our own stylesheet.
-stylesheets[all][] = stylesheets/petal.css
+stylesheets[all][] = css/petal.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html

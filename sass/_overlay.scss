@@ -1,5 +1,3 @@
-
-
 // =================================================================
 // 											Overlay
 #overlay {
@@ -110,7 +108,7 @@
 					}
 					&:hover,
 					&:focus {
-						color: scale-lightness( $D-blue, -15% );
+						color: brighten( $D-blue, -15% );
 					}
 				}
 			}

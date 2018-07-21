@@ -1,15 +1,4 @@
-//
 // Initialization partial
-//
-// To make it easier to use all variables and mixins in any Sass file in this
-// theme, each .scss file has a @import "init" declaration. And this _init.scss
-// file is in charge of importing all the other partials needed for the theme.
-//
-// This initialization partial is organized in this way:
-// - First we set any shared Sass variables.
-// - Next we import Compass plug-ins (Sass mixin libraries).
-// - Last we define our custom mixins for this theme.
-//
 
 
 // =================================================================
@@ -17,28 +6,28 @@
 //
 
 // The amount lists, blockquotes and comments are indented.
-$indent-amount: 30px;
+$indent-amount:             30px;
 
 // The height of the navigation container.
-$nav-height: 3em;
+$nav-height:                3em;
 
 // -----------------------------------------------------------------------------
 // Global variables
 //
 
 /* Microsoft research says 40px is ideal size for a touch target */
-$pointer_target-size: 2.5rem; /* height or width */
+$pointer_target-size:       2.5rem; /* height or width */
 
-$pointer_target-padding: 0.3em 1em; /* used by buttons */
+$pointer_target-padding:    0.3em 1em; /* used by buttons */
 $pointer_target-flat-padding: 0.3em; /* used by flat buttons */
 $pointer_target-line-height: 1.3em; /* Assuming font-size: 1rem; */
 
-$data-field-padding: 0.3em 0.5em; /* used by table cells and text fields */
+$data-field-padding:        0.3em 0.5em; /* used by table cells and text fields */
 
-$corner_radius-large:	0.5em;
-$corner_radius-pointer:	2px;
+$corner_radius-large:       0.5em;
+$corner_radius-pointer:     2px;
 
-$page-margins: 40px;
+$page-margins:              6%;
 
 
 // =================================================================
@@ -120,9 +109,13 @@ $overlay-tabs-border-color: #A6A6A6;
 
 
 // =================================================================
-// 											Partials
-// to be shared with all .scss files.
+// 											Mixins
 //
 
-// Now we add our custom helper mixins.
-@import "mixins";
+// A modern replacement for 'clearfix'
+@mixin group {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;}
+}

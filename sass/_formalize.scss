@@ -1,19 +1,10 @@
-// Note: This file is dependent on Sass and Compass.
-// Sass         = http://sass-lang.com
-// Compass      = http://compass-style.org
-// Downloaded   = 28 June 2014
-
-
 /*=========================================
                         CONTENTS
 
-Widths
-UI Consistency
-IE6
-
+  Widths
+  UI Consistency
+  IE6
 */
-
-@import "compass/css3";
 
 //----------------------------------------------------------------------------------------------------
 //                                                              `Widths
@@ -110,12 +101,12 @@ input[type="button"] {
   // line-height: $pointer_target-line-height;
 
   &:hover {
-    background-color: scale-lightness( $colour-brand-green, -15% );
+    background-color: darken( $colour-brand-green, 15% );
     text-decoration: none;
   }
 
   &:active {
-    background-color: scale-lightness( $colour-brand-green, -15% );
+    background-color: darken( $colour-brand-green, 15% );
     // @include box-shadow(inset rgba(black, 0.25) 0 1px 2px 0);
   }
 

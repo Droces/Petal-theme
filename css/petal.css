@@ -44,13 +44,6 @@
   src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(../fonts/SourceSansPro-It.woff) format("woff");
   src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(../fonts/SourceSansPro-It.ttf) format("truetype"); }
 
-/**
- * @file
- * Custom sass mixins
- *
- * Define the custom mixins for your project here.
- * http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
- */
 /* HTML element (SMACSS base) rules */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -351,52 +344,6 @@ template {
 [hidden] {
   display: none; }
 
-/* Import Sass mixins, variables, Compass modules, etc. */
-/* Microsoft research says 40px is ideal size for a touch target */
-/* height or width */
-/* used by buttons */
-/* used by flat buttons */
-/* Assuming font-size: 1rem; */
-/* used by table cells and text fields */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(../fonts/SourceSansPro-Regular.woff2) format("woff2");
-  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(../fonts/SourceSansPro-Regular.woff) format("woff");
-  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(../fonts/SourceSansPro-Regular.ttf) format("truetype"); }
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(../fonts/SourceSansPro-Semibold.woff2) format("woff2");
-  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(../fonts/SourceSansPro-Semibold.woff) format("woff");
-  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(../fonts/SourceSansPro-Semibold.ttf) format("truetype"); }
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(../fonts/SourceSansPro-Bold.woff2) format("woff2");
-  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(../fonts/SourceSansPro-Bold.woff) format("woff");
-  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(../fonts/SourceSansPro-Bold.ttf) format("truetype"); }
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(../fonts/SourceSansPro-It.woff2) format("woff2");
-  src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(../fonts/SourceSansPro-It.woff) format("woff");
-  src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(../fonts/SourceSansPro-It.ttf) format("truetype"); }
-
-/**
- * @file
- * Custom sass mixins
- *
- * Define the custom mixins for your project here.
- * http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
- */
 body {
   color: #000;
   background: #fff; }
@@ -576,58 +523,19 @@ td a, th a,
     User login block
     Disable overlay message
  */
-/* Microsoft research says 40px is ideal size for a touch target */
-/* height or width */
-/* used by buttons */
-/* used by flat buttons */
-/* Assuming font-size: 1rem; */
-/* used by table cells and text fields */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(../fonts/SourceSansPro-Regular.woff2) format("woff2");
-  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(../fonts/SourceSansPro-Regular.woff) format("woff");
-  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(../fonts/SourceSansPro-Regular.ttf) format("truetype"); }
+@media all and (max-width: 900px) {
+  .table-container {
+    overflow-x: scroll;
+    border-left: solid 1px grey;
+    border-right: solid 1px grey; } }
 
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(../fonts/SourceSansPro-Semibold.woff2) format("woff2");
-  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(../fonts/SourceSansPro-Semibold.woff) format("woff");
-  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(../fonts/SourceSansPro-Semibold.ttf) format("truetype"); }
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(../fonts/SourceSansPro-Bold.woff2) format("woff2");
-  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(../fonts/SourceSansPro-Bold.woff) format("woff");
-  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(../fonts/SourceSansPro-Bold.ttf) format("truetype"); }
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(../fonts/SourceSansPro-It.woff2) format("woff2");
-  src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(../fonts/SourceSansPro-It.woff) format("woff");
-  src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(../fonts/SourceSansPro-It.ttf) format("truetype"); }
-
-/**
- * @file
- * Custom sass mixins
- *
- * Define the custom mixins for your project here.
- * http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
- */
 /**
  *                                        Small components
  */
 body,
 #overlay-content {
   background: #ffffff;
-  color: scale-lightness(black, 10%);
+  color: brighten(black, 10%);
   font-size: 16px;
   line-height: 1.5;
   font-family: "Source Sans Pro", sans-serif; }
@@ -701,7 +609,7 @@ table {
   table tr {
     border-width: 1px;
     border-style: solid;
-    border-color: scale-lightness(#fcfcfa, -20%); }
+    border-color: #d6d6ba; }
     table tr.odd, table tr.even {
       background: none; }
     table tr:hover {
@@ -715,7 +623,7 @@ table {
       background: #ffc;
       border-color: #eeb; }
     table tr.region-title {
-      background: scale-lightness(#fcfcfa, -2%); }
+      background: #f8f8f4; }
   table td,
   table th {
     vertical-align: middle;
@@ -862,9 +770,9 @@ fieldset {
 #branding {
   padding: 0;
   margin-bottom: 1em;
-  padding-left: 40px;
+  padding-left: 6%;
   /* LTR */
-  padding-right: 40px;
+  padding-right: 6%;
   /* LTR */ }
   body > #branding {
     background: #E0E0D8;
@@ -931,7 +839,10 @@ ul.primary,
   line-height: inherit;
   float: left;
   margin-bottom: -1px;
-  border: none; }
+  border: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap; }
   ul.primary:after,
   #overlay-tabs:after {
     content: "";
@@ -1021,9 +932,9 @@ ul.secondary {
 #page {
   padding: 0;
   /* LTR */
-  margin-right: 40px;
+  margin-right: 6%;
   /* LTR */
-  margin-left: 40px;
+  margin-left: 6%;
   /* LTR */
   position: relative;
   color: #333; }
@@ -1226,7 +1137,7 @@ input[type="button"] {
   font-weight: 600;
   border-color: #B7B7AC;
   padding: 0.3em 1em;
-  background-image: linear-gradient(top, scale-lightness(#fcfcfa, 10%), scale-lightness(#fcfcfa, -10%));
+  background-image: linear-gradient(top, brighten(#fcfcfa, 10%), #e9e9da);
   border-radius: 0.4em;
   font-family: inherit;
   margin-bottom: 1em;
@@ -1245,25 +1156,25 @@ input[type="button"] {
   input[type="submit"]:focus,
   input[type="button"]:hover,
   input[type="button"]:focus {
-    background-image: linear-gradient(top, scale-lightness(#fcfcfa, 25%), scale-lightness(#fcfcfa, -5%)); }
+    background-image: linear-gradient(top, brighten(#fcfcfa, 25%), #f2f2ea); }
 
-textarea,
-select,
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
+#page textarea, #page
+select, #page
+input[type="date"], #page
+input[type="datetime"], #page
+input[type="datetime-local"], #page
+input[type="email"], #page
+input[type="month"], #page
+input[type="number"], #page
+input[type="password"], #page
+input[type="search"], #page
+input[type="tel"], #page
+input[type="text"], #page
+input[type="time"], #page
+input[type="url"], #page
 input[type="week"] {
   padding: 0.3em 0.5em;
-  background-color: #fcfcfa !important;
+  background-color: #fcfcfa;
   border-radius: 2px;
   border: 1px solid #ccc;
   border-top-color: #999; }
@@ -1277,11 +1188,22 @@ input[type="week"] {
 .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: 1.8em; }
 
+@media all and (max-width: 900px) {
+  .views-table {
+    overflow-x: scroll;
+    border-left: solid 1px grey;
+    border-right: solid 1px grey; } }
+
+.form-type-select {
+  max-width: 100%; }
+  .form-type-select select {
+    width: 100%; }
+
 /**
  *                                        Database log table.
  */
 table#admin-dblog tr.dblog-warning {
-  background-color: scale-lightness(rgba(224, 150, 0, 0.25), 20%); }
+  background-color: brighten(rgba(224, 150, 0, 0.25), 20%); }
   table#admin-dblog tr.dblog-warning td.icon {
     background-image: url("../images/warning.svg"); }
 
@@ -1298,6 +1220,7 @@ table#admin-dblog tr.dblog-error {
 
 /**
  *                                        Messages
+ * The colours are copied from Seven in Drupal 8
  */
 div.messages {
   border-radius: 0.5em; }
@@ -1310,22 +1233,25 @@ div.error {
   border-radius: 2px; }
 
 div.status {
-  color: scale-lightness(#77b259, -30%) !important;
-  background-color: scale-lightness(#77b259, 92%) !important;
-  border-color: scale-lightness(#77b259, 0%);
+  color: #325e1c;
+  background-color: #f3faef;
+  border-color: #c9e1bd;
+  border-left-color: #77b259;
   background-image: url("../images/check.svg"); }
 
 div.warning {
-  color: scale-lightness(#e09600, -30%);
-  background-image: url("../images/warning.svg");
-  background-color: scale-lightness(#e09600, 92%);
-  border-color: scale-lightness(#e09600, 0%); }
+  color: #734c00;
+  background-color: #fdf8ed;
+  border-color: #f4daa6;
+  border-left-color: #e09600;
+  background-image: url("../images/warning.svg"); }
 
 div.error {
-  color: scale-lightness(#e62600, -30%);
-  background-image: url("../images/error.svg");
-  background-color: scale-lightness(#e62600, 92%);
-  border-color: scale-lightness(#e62600, 0%); }
+  color: #a51b00;
+  background-color: #fcf4f2;
+  border-color: #f9c9bf;
+  border-left-color: #e62600;
+  background-image: url("../images/error.svg"); }
 
 /**
  *                                        System.
@@ -1655,7 +1581,7 @@ div.remove-shortcut a:focus span.icon, div.remove-shortcut a:hover span.icon {
           border-bottom: 1px solid #000;
           color: inherit; }
         #overlay #page > ul.secondary li a:hover, #overlay #page > ul.secondary li a:focus {
-          color: scale-lightness(#0074bd, -15%); }
+          color: brighten(#0074bd, -15%); }
   #overlay #page #content > .action-links {
     margin-top: 0; }
 

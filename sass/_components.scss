@@ -29,8 +29,17 @@
     Disable overlay message
  */
 
-@import "init";
 
+@mixin responsive-table-container {
+  @media all and (max-width: 900px) {
+    overflow-x: scroll;
+    border-left: solid 1px grey;
+    border-right: solid 1px grey;
+  }
+}
+.table-container {
+  @include responsive-table-container;
+}
 
 
 
@@ -41,7 +50,7 @@
 body,
 #overlay-content {
     background: $white;
-    color: scale-lightness( black, 10% );
+    color: brighten( black, 10% );
     font-size: 16px;
     line-height: 1.5;
     font-family: $font-source_sans;
@@ -49,7 +58,7 @@ body,
 
 html.js body {
   $h-admin_menu: 30px;
-  
+
   padding: 0/* 1.5em 1em */;
   margin-top: $h-admin_menu; // makes space for admin menu
 }
@@ -144,9 +153,9 @@ table {
   tr {
     border-width: 1px;
     border-style: solid;
-    border-color: scale-lightness($eggshell,-20%);
+    border-color: darken($eggshell, 20%);
 
-    &.odd, 
+    &.odd,
     &.even {
       background: none; // Overrides system
     }
@@ -166,7 +175,7 @@ table {
       border-color: #eeb;
     }
     &.region-title {
-      background: scale-lightness($eggshell,-2%);
+      background: darken($eggshell, 2%);
     }
   }
   td,
@@ -216,14 +225,10 @@ table {
       &.ok {
         color: #255b1e;
         background-color: #e5ffe2;
-        // color: scale-lightness($success, -50%);
-        // background-color: rgba($success, 0.15);
       }
       &.info {
         color: #040f37;
         background-color: #bdf;
-        // color: scale-lightness($selection, -50%);
-        // background-color: rgba($selection, 0.15);
       }
       &.warning {
         color: #840;
@@ -268,7 +273,7 @@ fieldset {
   position: relative;
   margin: 1em 0;
   border-radius: 0.3em;
-  
+
   legend {
     padding: 0.3em;
     margin-left: 0.6em;
@@ -483,12 +488,15 @@ fieldset {
  */
 ul.primary,
 #overlay-tabs {
+  @include group;
   font-size: inherit;
   line-height: inherit;
   float: left;
   margin-bottom: -1px;
   border: none;
-  @include group;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
 
   li {
     margin: 0;
@@ -496,7 +504,7 @@ ul.primary,
 
     a {
 
-      &, 
+      &,
       &.active,
       &:active,
       &:visited,
@@ -514,7 +522,7 @@ ul.primary,
         font-size: inherit;
         border-radius: (4px 4px 0px 0px);
       }
-      
+
 
       &:focus,
       &:hover {
@@ -524,9 +532,9 @@ ul.primary,
       }
     }
     &.active a[href] {
-      &, 
-      &.active, 
-      &:active, 
+      &,
+      &.active,
+      &:active,
       &:visited {
         border-bottom-color: $overlay-tabs-bg-active;
           background-color: $overlay-tabs-bg-active;
@@ -818,7 +826,7 @@ div.filter-options select {
 }
 
 input, select, textarea {
-    font-family: inherit;
+  font-family: inherit;
   font-size: inherit;
 }
 
@@ -830,9 +838,9 @@ input[type="button"] {
   font-weight: 600;
   border-color: #B7B7AC;
   padding: $pointer_target-padding;
-  background-image: (linear-gradient(top, 
-    scale-lightness($eggshell,10%), 
-    scale-lightness($eggshell,-10%)));
+  background-image: (linear-gradient(top,
+    brighten($eggshell,10%),
+    darken($eggshell,10%)));
   border-radius: 0.4em;
   font-family: inherit;
   margin-bottom: 1em;
@@ -845,9 +853,9 @@ input[type="button"] {
 
   &:hover,
   &:focus {
-    background-image: (linear-gradient(top, 
-      scale-lightness($eggshell,25%), 
-      scale-lightness($eggshell,-5%)));
+    background-image: (linear-gradient(top,
+      brighten($eggshell,25%),
+      darken($eggshell,5%)));
   }
 }
 
@@ -866,11 +874,13 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-  padding: $data-field-padding;
-  background-color: $eggshell !important;
-  border-radius: ( $corner_radius-pointer );
-  border: 1px solid #ccc;
-  border-top-color: #999;
+  #page & {
+    padding: $data-field-padding;
+    background-color: $eggshell;
+    border-radius: ( $corner_radius-pointer );
+    border: 1px solid #ccc;
+    border-top-color: #999;
+  }
 }
 
 
@@ -890,6 +900,15 @@ input[type="week"] {
     }
   }
 }
+.views-table {
+  @include responsive-table-container;
+}
+.form-type-select {
+  max-width: 100%;
+  select {
+    width: 100%;
+  }
+}
 
 
 
@@ -900,7 +919,7 @@ input[type="week"] {
  */
 table#admin-dblog tr {
   &.dblog-warning {
-    background-color: scale-lightness(rgba($warning, 0.25), 20%);
+    background-color: brighten(rgba($warning, 0.25), 20%);
 
     td.icon {
         background-image: url("../images/warning.svg");
@@ -933,6 +952,7 @@ table#admin-dblog tr {
 
 /**
  *                                        Messages
+ * The colours are copied from Seven in Drupal 8
  */
 div.messages {
     // background-position: 8px 8px;
@@ -951,22 +971,25 @@ div.error {
   border-radius: ( 2px );
 }
 div.status {
-    color: scale-lightness( $success, -30% ) !important;
-  background-color: scale-lightness( $success, 92% ) !important;
-  border-color: scale-lightness( $success, 0% );
+  color: #325e1c;
+  background-color: #f3faef;
+  border-color: #c9e1bd;
+  border-left-color: #77b259;
   background-image: url('../images/check.svg');
 }
 div.warning {
-    color: scale-lightness( $warning, -30% );
+  color: #734c00;
+  background-color: #fdf8ed;
+  border-color: #f4daa6;
+  border-left-color: #e09600;
   background-image: url('../images/warning.svg');
-  background-color: scale-lightness( $warning, 92% );
-  border-color: scale-lightness( $warning, 0% );
 }
 div.error {
-    color: scale-lightness( $error, -30% );
+  color: #a51b00;
+  background-color: #fcf4f2;
+  border-color: #f9c9bf;
+  border-left-color: #e62600;
   background-image: url('../images/error.svg');
-  background-color: scale-lightness( $error, 92% );
-  border-color: scale-lightness( $error, 0% );
 }
 
 
@@ -1151,7 +1174,7 @@ div.add-or-remove-shortcuts a {
       vertical-align: -2px;
       background-position: 0px 0px;
   }
-  &:focus, 
+  &:focus,
   &:hover {
     span.icon {
         background-position: -20px 0px;
@@ -1162,7 +1185,7 @@ div.remove-shortcut a {
   span.icon {
       background-position: -40px top;
   }
-  &:focus, 
+  &:focus,
   &:hover {
     span.icon {
         background-position: -60px 0px;
